@@ -1,11 +1,27 @@
 <template>
   <div>
     <h1>Countries</h1>
+    <CountryCard v-for="country in countries" :key="country.id" :country="country" />
   </div>
 </template>
 
 <script>
-export default {};
+import CountryCard from '@/components/CountryCard.vue';
+import { mapState } from 'vuex';
+
+export default {
+  components: {
+    CountryCard,
+  },
+
+  computed: {
+    ...mapState(['countries']),
+  },
+
+  created() {
+    this.$store.dispatch('fetchCountries');
+  },
+};
 </script>
 
 <style lang="scss" scoped>
