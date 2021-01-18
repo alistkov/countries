@@ -1,24 +1,29 @@
-# countries
+# [REST Countries](https://restcountries.eu/)
 
-## Project setup
-```
-yarn install
-```
+Приложение с информацией о странах мира.
 
-### Compiles and hot-reloads for development
-```
-yarn serve
-```
+## Технологии
 
-### Compiles and minifies for production
+1. [Vue](https://vuejs.org/)
+2. [Vuex](https://vuex.vuejs.org/)
+3. [Vue Router](https://router.vuejs.org/)
+
+## Установка зависимостей
 ```
-yarn build
+npm i
 ```
 
-### Lints and fixes files
+### Сервер для разработки
 ```
-yarn lint
+npm run serve
 ```
 
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+### Сборка проекта
+```
+npm run build
+```
+
+### Линтер
+```
+npm run lint
+```
