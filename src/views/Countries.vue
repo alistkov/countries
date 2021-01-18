@@ -1,6 +1,5 @@
 <template>
-  <div>
-    <h1>Countries</h1>
+  <div class="countries">
     <CountryCard v-for="country in countries" :key="country.id" :country="country" />
   </div>
 </template>
@@ -24,6 +23,11 @@ export default {
 };
 </script>
 
-<style lang="scss" scoped>
-
+<style lang="scss">
+  .countries {
+    box-sizing: border-box;
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 -20px;
+  }
 </style>
