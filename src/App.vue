@@ -30,6 +30,10 @@ export default {
   font-family: 'Roboto', sans-serif;;
 }
 
+body {
+  background: #f3f3f3;
+}
+
 .container {
   box-sizing: border-box;
   width: 100%;

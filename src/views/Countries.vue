@@ -1,6 +1,10 @@
 <template>
   <div class="countries">
-    <CountryCard v-for="country in countries" :key="country.id" :country="country" />
+    <CountryCard
+      v-for="country in countries"
+      :key="country.id"
+      :country="country"
+    />
   </div>
 </template>
 
@@ -13,21 +17,19 @@ export default {
     CountryCard,
   },
 
-  computed: {
-    ...mapState(['countries']),
-  },
-
   created() {
     this.$store.dispatch('fetchCountries');
   },
+
+  computed: mapState(['countries']),
 };
 </script>
 
 <style lang="scss">
-  .countries {
-    box-sizing: border-box;
-    display: flex;
-    flex-wrap: wrap;
-    margin: 0 -20px;
-  }
+.countries {
+  box-sizing: border-box;
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 -20px;
+}
 </style>
