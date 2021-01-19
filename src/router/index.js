@@ -1,6 +1,7 @@
 import Vue from 'vue';
 import VueRouter from 'vue-router';
-import CountriesList from '@/views/Countries.vue';
+import Countries from '@/views/Countries.vue';
+import ShowCountry from '@/views/ShowCountry.vue';
 
 Vue.use(VueRouter);
 
@@ -8,7 +9,14 @@ const routes = [
   {
     path: '/',
     name: 'countries-list',
-    component: CountriesList,
+    component: Countries,
+  },
+
+  {
+    path: '/county/:name',
+    name: 'show-country',
+    component: ShowCountry,
+    props: true,
   },
 ];
 
