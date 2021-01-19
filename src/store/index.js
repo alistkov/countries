@@ -8,10 +8,15 @@ Vue.use(Vuex);
 export default new Vuex.Store({
   state: {
     countries: [],
+    country: {},
   },
   mutations: {
     SET_COUNTRIES(state, countries) {
       state.countries = countries;
+    },
+
+    SET_COUNTRY(state, country) {
+      state.country = country;
     },
   },
   actions: {
@@ -24,7 +29,21 @@ export default new Vuex.Store({
           console.log(error);
         });
     },
+
+    fetchCountry({ commit }, name) {
+      CountriesService.showCountry(name)
+        .then((response) => {
+          commit('SET_COUNTRY', response.data);
+        })
+        .catch((error) => {
+          console.log(error);
+        });
+    },
   },
   modules: {
+  },
+
+  getters: {
+    getCountry: (state) => (name) => state.countries.find((country) => country.name === name),
   },
 });
