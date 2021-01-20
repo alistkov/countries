@@ -1,62 +1,62 @@
 <template>
   <div class="country">
     <div class="country__name">
-      {{ country[0].name }}
+      {{ country.name }}
     </div>
 
     <div class="country__row">
       <div class="country__row-name">Native name:</div>
-      <div class="country__row-value">{{ country[0].nativeName }}</div>
+      <div class="country__row-value">{{ country.nativeName }}</div>
     </div>
 
     <div class="country__row">
       <div class="country__row-name">Alt spelling(s):</div>
       <div class="country__row-value">
-        <span v-for="(altSpelling, index) in country[0].altSpellings" :key="index">
-          {{ altSpelling }}<i v-if="index + 1 < country[0].altSpellings.length">, </i>
+        <span v-for="(altSpelling, index) in country.altSpellings" :key="index">
+          {{ altSpelling }}<i v-if="index + 1 < country.altSpellings.length">, </i>
         </span>
       </div>
     </div>
 
     <div class="country__row">
       <div class="country__row-name">alpha2Code:</div>
-      <div class="country__row-value">{{ country[0].alpha2Code }}</div>
+      <div class="country__row-value">{{ country.alpha2Code }}</div>
     </div>
 
     <div class="country__row">
       <div class="country__row-name">alpha3Code:</div>
-      <div class="country__row-value">{{ country[0].alpha3Code }}</div>
+      <div class="country__row-value">{{ country.alpha3Code }}</div>
     </div>
 
     <div class="country__row">
       <div class="country__row-name">Capital:</div>
-      <div class="country__row-value">{{ country[0].capital }}</div>
+      <div class="country__row-value">{{ country.capital }}</div>
     </div>
 
     <div class="country__row">
       <div class="country__row-name">Population:</div>
-      <div class="country__row-value">{{ country[0].population }}</div>
+      <div class="country__row-value">{{ country.population }}</div>
     </div>
 
     <div class="country__row">
       <div class="country__row-name">Region:</div>
-      <div class="country__row-value">{{ country[0].region }}</div>
+      <div class="country__row-value">{{ country.region }}</div>
     </div>
 
     <div class="country__row">
       <div class="country__row-name">Subegion:</div>
-      <div class="country__row-value">{{ country[0].subregion }}</div>
+      <div class="country__row-value">{{ country.subregion }}</div>
     </div>
 
     <div class="country__row">
       <div class="country__row-name">Top level domain(s):</div>
       <div class="country__row-value">
         <span
-          v-for="(domain, index) in country[0].topLevelDomain"
+          v-for="(domain, index) in country.topLevelDomain"
           :key="domain"
         >
           {{ domain
-          }}<i v-if="index + 1 < country[0].topLevelDomain.length">, </i>
+          }}<i v-if="index + 1 < country.topLevelDomain.length">, </i>
         </span>
       </div>
     </div>
@@ -64,27 +64,27 @@
     <div class="country__row">
       <div class="country__row-name">Calling code(s):</div>
       <div class="country__row-value">
-        <span v-for="(code, index) in country[0].callingCodes" :key="index">
-          +{{ code }}<i v-if="index + 1 < country[0].callingCodes.length">, </i>
+        <span v-for="(code, index) in country.callingCodes" :key="index">
+          +{{ code }}<i v-if="index + 1 < country.callingCodes.length">, </i>
         </span>
       </div>
     </div>
 
     <div class="country__row">
       <div class="country__row-name">Area:</div>
-      <div class="country__row-value">{{ country[0].area }}</div>
+      <div class="country__row-value">{{ country.area }}</div>
     </div>
 
     <div class="country__row">
       <div class="country__row-name">Demonym:</div>
-      <div class="country__row-value">{{ country[0].demonym }}</div>
+      <div class="country__row-value">{{ country.demonym }}</div>
     </div>
 
     <div class="country__row">
       <div class="country__row-name">Timezone(s):</div>
       <div class="country__row-value">
-        <span v-for="(timezone, index) in country[0].timezones" :key="timezone">
-          {{ timezone }}<i v-if="index + 1 < country[0].timezones.length">, </i>
+        <span v-for="(timezone, index) in country.timezones" :key="timezone">
+          {{ timezone }}<i v-if="index + 1 < country.timezones.length">, </i>
         </span>
       </div>
     </div>
@@ -92,8 +92,8 @@
     <div class="country__row">
       <div class="country__row-name">Borders:</div>
       <div class="country__row-value">
-        <span v-for="(border, index) in country[0].borders" :key="index">
-          {{ border }}<i v-if="index + 1 < country[0].borders.length">, </i>
+        <span v-for="(border, index) in country.borders" :key="index">
+          {{ border }}<i v-if="index + 1 < country.borders.length">, </i>
         </span>
       </div>
     </div>
@@ -101,7 +101,7 @@
     <div class="country__row">
       <div class="country__row-name">Currencies:</div>
       <div class="country__row-value">
-        <span v-for="(cur, index) in country[0].currencies" :key="index">
+        <span v-for="(cur, index) in country.currencies" :key="index">
           name: {{ cur.name }}, code: {{ cur.code }}, symbol: {{ cur.symbol }}
         </span>
       </div>
@@ -110,7 +110,7 @@
     <div class="country__row">
       <div class="country__row-name">Flag:</div>
       <div class="country__row-value">
-        <img :src="country[0].flag" alt="">
+        <img :src="country.flag" alt="">
       </div>
     </div>
   </div>

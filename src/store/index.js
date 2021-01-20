@@ -33,7 +33,8 @@ export default new Vuex.Store({
     fetchCountry({ commit }, name) {
       CountriesService.showCountry(name)
         .then((response) => {
-          commit('SET_COUNTRY', response.data);
+          const [country] = response.data;
+          commit('SET_COUNTRY', country);
         })
         .catch((error) => {
           console.log(error);
